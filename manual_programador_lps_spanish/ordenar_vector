@@ -1,0 +1,321 @@
+#programa que ordena un vector por cuatro metodos: burbuja, seleccion, insercion, recursivo
+
+#bloque de SUBRUTINAS AUXILIARES usadas en los metodos de ordenacion
+
+SUBRUTINA pedirNumero indice
+
+     ESCRIBIR (NL," Ingrese numero ",indice,": ")
+     numero=LEER_ENTERO()
+     DEVOLVER numero
+
+FIN_SUBRUTINA
+
+SUBRUTINA numeroElementos
+
+     ESCRIBIR (NL," Ingrese numero de elementos del vector: ")
+     numero=LEER_ENTERO()
+     DEVOLVER numero     
+FIN_SUBRUTINA
+
+###metodos de ordenamiento
+
+SUBRUTINA ordenarBurbuja 
+     
+     i=0
+     j=0
+     num=0
+     tmp=0
+     
+     num=numeroElementos()
+
+     vector = ARREGLO(num)
+     
+     #ingreso del vector
+
+     i=1
+        MIENTRAS i<=num
+          vector[i]=pedirNumero(i)
+                i=i+1
+     FIN_MIENTRAS
+     
+     #se ordena el vector
+
+        i=1
+        MIENTRAS i <= num-1
+                j = i+1
+          MIENTRAS j<=num
+
+               SI vector[j]<vector[i]
+                    tmp=vector[j]
+                    vector[j]=vector[i]
+                    vector[i]=tmp
+               FIN_SI 
+                  j=j+1
+          FIN_MIENTRAS
+                i=i+1
+     FIN_MIENTRAS
+
+     #mostrando el vector
+     ESCRIBIR (NL,"  [")
+        i=1
+     MIENTRAS i<=num
+          ESCRIBIR ("  ",vector[i])
+                i=i+1
+     FIN_MIENTRAS
+     ESCRIBIR ("  ]",NL)
+                
+FIN_SUBRUTINA
+
+SUBRUTINA ordenarInsercion
+
+     i=0
+     j=0
+     num=0
+     posMin=0
+
+     num=numeroElementos()
+
+     vector =ARREGLO(num)
+     
+     #ingreso del vector
+     i=1
+     MIENTRAS i<=num
+          vector[i]=pedirNumero(i)
+                i=i+1
+     FIN_MIENTRAS
+     
+     #ordenemos
+     i=2
+     MIENTRAS i<=num
+          posMin=vector[i]
+                j=i-1
+          MIENTRAS j>=1
+               SI vector[j]<=posMin
+                    ROMPER
+               FIN_SI
+               vector[j+1]=vector[j]
+                        j=j-1
+          FIN_MIENTRAS
+          vector[j+1]=posMin
+                i=i+1
+     FIN_MIENTRAS 
+
+     #mostrando el vector
+     ESCRIBIR (NL,"  [")
+        i=1
+     MIENTRAS i<=num
+          ESCRIBIR ("  ",vector[i])
+                i=i+1
+     FIN_MIENTRAS
+     ESCRIBIR ("  ]",NL)
+
+FIN_SUBRUTINA
+
+SUBRUTINA ordenarSeleccion
+
+     i=0
+     j=0
+     num=0
+     posMin=0
+     tmp=0
+
+     num=numeroElementos()
+
+     vector = ARREGLO(num)
+     
+     #ingreso del vector
+     i=1
+     MIENTRAS i<=num
+          vector[i]=pedirNumero(i)
+                i=i+1
+     FIN_MIENTRAS     
+
+     #ordenemos
+     i=1
+     MIENTRAS i<=num-1
+          posMin=i
+                j=i+1
+          MIENTRAS j<=num
+               SI vector[j]<vector[posMin]
+                    posMin=j
+               FIN_SI
+                        j=j+1
+          FIN_MIENTRAS
+          tmp=vector[i]
+          vector[i]=vector[posMin]
+          vector[posMin]=tmp
+                i=i+1
+     FIN_MIENTRAS
+
+     #mostrando el vector
+     ESCRIBIR (NL,"  [")
+        i=1
+     MIENTRAS i<=num
+          ESCRIBIR ("  ",vector[i])
+                i=i+1
+     FIN_MIENTRAS
+     ESCRIBIR ("  ]",NL)
+
+FIN_SUBRUTINA
+
+###bloque de SUBRUTINAS para ordenar recursivamente un vector de 5 elementos
+
+SUBRUTINA elementoVector v1 v2 v3 v4 v5 indice
+     
+     SI indice==1
+          DEVOLVER v1
+     SINO_SI indice==2
+          DEVOLVER v2
+     SINO_SI indice==3
+          DEVOLVER v3
+     SINO_SI indice==4
+          DEVOLVER v4
+     SINO_SI indice==5
+          DEVOLVER v5
+     FIN_SI
+     
+FIN_SUBRUTINA
+
+SUBRUTINA indiceMayor v1 v2 v3 v4 v5 n
+
+     SI n==1
+          DEVOLVER 1
+     FIN_SI
+     
+     mayorAnterior=0
+     indice=0
+     elementoActual=0
+
+     indice=indiceMayor(v1,v2,v3,v4,v5,n-1)
+     mayorAnterior=elementoVector(v1,v2,v3,v4,v5,indice)
+     elementoActual=elementoVector(v1,v2,v3,v4,v5,n)
+
+     SI elementoActual>mayorAnterior
+          DEVOLVER n
+     SINO
+          DEVOLVER indice
+     FIN_SI
+
+FIN_SUBRUTINA
+
+SUBRUTINA ordenamientoRecursivo v1 v2 v3 v4 v5 n
+
+     #llenado del vector
+
+     vector=ARREGLO(5)
+     
+     vector[1]=v1
+     vector[2]=v2
+     vector[3]=v3
+     vector[4]=v4
+     vector[5]=v5
+
+     #intercambiamos el elemento n por el mayor del subvector anterior
+
+     tmp=0
+     indice=0
+     i=0
+
+     indice=indiceMayor(v1,v2,v3,v4,v5,n)
+     tmp=vector[n]
+     vector[n]=vector[indice]
+     vector[indice]=tmp
+     
+     #determinamos si mostramos el vector ya ordenado o seguimos ordenando
+
+     SI n>2
+          ordenamientoRecursivo(vector[1],vector[2],vector[3],vector[4],vector[5],n-1)
+     SINO
+          #mostramos el vector
+          ESCRIBIR (NL,"  [")
+                i=1
+          MIENTRAS i<= 5
+               ESCRIBIR ("  ",vector[i])
+                        i=i+1
+          FIN_MIENTRAS
+          ESCRIBIR ("  ]",NL)
+     FIN_SI
+
+FIN_SUBRUTINA
+
+SUBRUTINA ordenarRecursivamente
+
+     i=0
+     j=0
+
+     ESCRIBIR (NL," El numero de elementos es 5 y es fijo.")
+     
+     vector=ARREGLO(  5)
+     
+     #ingreso del vector
+     
+        i=1
+     MIENTRAS i<=5
+          vector[i]=pedirNumero(i)
+                i=i+1
+     FIN_MIENTRAS
+     
+     ordenamientoRecursivo(vector[1],vector[2],vector[3],vector[4],vector[5],5)     
+
+FIN_SUBRUTINA
+
+###bloque de SUBRUTINAS para ELEGIR METODO DE ORDENACION
+
+SUBRUTINA pedirMetodo
+     m=0
+     MIENTRAS (m!=1 Y m!=2 Y m!=3 Y m!=4)
+          ESCRIBIR (NL," : ")
+          m=LEER_ENTERO()
+     FIN_MIENTRAS
+     DEVOLVER m
+FIN_SUBRUTINA
+
+SUBRUTINA ordenar metodo
+     
+     SI metodo==1 
+          ordenarBurbuja()
+     SINO_SI metodo==2 
+          ordenarSeleccion()
+     SINO_SI metodo==3 
+          ordenarInsercion()
+     SINO_SI metodo==4 
+          ordenarRecursivamente()
+     FIN_SI
+
+FIN_SUBRUTINA
+
+SUBRUTINA elegirMetodo 
+     metodo=0
+     rpta=0
+     ESCRIBIR (NL," ORDENEMOS VECTORES",NL)
+     ESCRIBIR (NL," Ingrese que metodo de ordenacion desea usar: ")
+     ESCRIBIR (NL)
+     ESCRIBIR (NL," 1: Metodo burbuja, aunque demora un poco mas")
+     ESCRIBIR (NL," 2: Metodo de seleccion, mejor que el anterior")
+     ESCRIBIR (NL," 3: Metodo de insercion, mi favorito")
+     ESCRIBIR (NL," 4: Metodo recursivo, para hacerlo mas interesante")
+     metodo=pedirMetodo()
+     DEVOLVER metodo
+FIN_SUBRUTINA
+
+SUBRUTINA deseaContinuar
+     rpta=2
+     MIENTRAS rpta!=0 Y rpta!=1
+          ESCRIBIR (NL," Desea continuar: 0 -> no  1 -> si : ")
+          rpta=LEER_ENTERO()
+     FIN_MIENTRAS
+     DEVOLVER rpta
+FIN_SUBRUTINA
+
+###CUERPO PRINCIPAL
+
+ESCRIBIR (NL,"          PROGRAMA DE ORDENAMIENTO DE VECTORES",NL )
+rpta=1
+metodo=0
+MIENTRAS rpta!=0
+        metodo=elegirMetodo()
+        ordenar(metodo)
+     rpta=deseaContinuar()
+FIN_MIENTRAS
+
+

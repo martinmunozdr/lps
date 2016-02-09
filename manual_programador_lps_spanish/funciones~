@@ -1,0 +1,34 @@
+FUNCION factRecursivo numero
+ SI numero==0
+  RETORNAR 1
+ FINSI
+
+ RETORNAR numero*factRecursivo(numero-1)
+FINFUNCION
+
+
+FUNCION factIterativo numero
+ VARIABLE rpta
+ rpta=1
+
+ VARIABLE contador
+
+ DESDE contador INICIA 1 TERMINA numero
+  rpta=rpta*contador
+ FINDESDE
+
+ RETORNAR rpta
+FINFUNCION
+
+
+ESCRIBIR NL,"Ingrese un numero: ",NL
+
+VARIABLE num
+num=leer()
+
+SI num>=0
+ ESCRIBIR NL,"Factorial hallado de forma recursiva: ",factRecursivo(num),NL
+ ESCRIBIR NL,"Factorial hallado de forma iterativa: ",factIterativo(num),NL
+SINO
+ ESCRIBIR NL,"Los numeros negativos no tienen factorial",NL
+FINSI

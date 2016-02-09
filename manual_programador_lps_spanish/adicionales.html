@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Manual del Programador - -Capacidades Adicionales del interprete</title>
+</head>
+<body>
+<h1>Adicionales</h1>
+<b>
+Existe la palabra reservada IMPORTAR<br>
+<br>
+IMPORTAR "algun_programa.lps"<br>
+<br>
+NO ES UNA Subrutina predefinida, es una palabra reservada, no utiliza parentesis<br>
+Solo se puede usar en el cuerpo principal del programa, no dentro de una subrutina<br>
+ni dentro de un bucle o condicional<br>
+<br>
+<br>
+Utilizando las diversas subrutinas predefinidas se puede hacer programacion web<br>
+con el protocolo CGI y tambien se puede utilizar la base de datos sqlite <br>
+<br>
+Para ejecutar los ejemplos CGI es necesario instalar un servidor como apache<br>
+y copiar los programas en la carpeta cgi del servidor, en la primera linea<br>
+del codigo se debe poner la ruta al interprete<br>
+<br>
+Para probar el interprete del lenguaje LPS se puede usar el interprete interactivo, para esto se ejecuta el interprete sin pasarle ningun<br> parametro, por ejemplo (en linux):<br>
+<br>
+./lps miprograma.lps<br>
+<br>
+Ejecutara miprograma.lps<br>
+<br>
+Mientras que:<br>
+<br>
+./lps<br>
+<br>
+Ingresara al interprete interactivo donde se puede probar el lenguaje.<br>
+<br>
+EJEMPLOS DE CODIGO OBTENIDO DEL INTERPRETE INTERACTIVO:<br>
+Ingrese su codigo: txt="qwerty"<br>
+<br>
+El texto es: qwerty<br>
+Ingrese su codigo: txt[2,4]<br>
+<br>
+El texto es: wer<br>
+Ingrese su codigo: txt[2,5]+"dddd"<br>
+<br>
+El texto es: wertdddd<br>
+<br>
+EN EL INTERPRETE INTERACTIVO SE PUEDE USAR RPTA PARA ACCEDER AL ULTIMO RESULTADO Y SALIR PARA TERMINAR LA EJECUCION DEL INTERPRETE<br>
+<br>
+<br>
+</b>
+<br><br>
+<a href="adicionales">Ejemplo: </a><br>
+<a href="predefinidos.html"> Anterior </a><a href="ejemplos.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

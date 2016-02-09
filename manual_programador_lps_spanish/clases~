@@ -1,0 +1,27 @@
+CLASE A
+ATRIBUTOS A x y
+METODO A iniciar_a
+    ESTE.x=5
+    ESTE.y=7
+FIN_METODO
+
+CLASE B
+ATRIBUTOS B nombre edad
+METODO B iniciar_b n e
+    ESTE.nombre=n
+    ESTE.edad=e
+FIN_METODO
+
+CLASE C A B
+METODO C iniciar_c
+    ESTE.iniciar_a()
+    ESTE.iniciar_b("Ruperto",39)
+    ESTE.x=ESTE.x+5
+FIN_METODO
+
+obj=C()
+obj.iniciar_c()
+ESCRIBIR("obj.x= ",obj.x)
+ESCRIBIR("obj.y= ",obj.y)
+ESCRIBIR("obj.nombre= ",obj.nombre)
+ESCRIBIR("obj.edad= ",obj.edad)

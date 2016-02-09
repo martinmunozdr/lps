@@ -1,0 +1,100 @@
+SUBRUTINA convertir_2dig d
+    primeros = ["cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez","once","doce","trece","catorce","quince"]
+
+    SI d<16
+        texto = " " + primeros[d+1]
+    SINO_SI d<20
+        texto = " dieci" + primeros[d-10+1]
+    SINO_SI d<21
+        texto = " veinte"
+    SINO_SI d<30
+        texto = " veinti" + primeros[d-20+1]
+    SINO_SI d<31
+        texto = " treinta"
+    SINO_SI d<40
+        texto = " treinta y " + primeros[d-30+1]
+    SINO_SI d<41
+        texto = " cuarenta"
+    SINO_SI d<50
+        texto = " cuarenta y " + primeros[d-40+1]
+    SINO_SI d<51
+        texto = " cincuenta"
+    SINO_SI d<60
+        texto = " cincuenta y " + primeros[d-50+1]
+    SINO_SI d<61
+        texto = " sesenta"
+    SINO_SI d<70
+        texto = " sesenta y " + primeros[d-60+1]
+    SINO_SI d<71
+        texto = " setenta"
+    SINO_SI d<80
+        texto = " setenta y " + primeros[d-70+1]
+    SINO_SI d<81
+        texto = " ochenta"
+    SINO_SI d<90
+        texto = " ochenta y " + primeros[d-80+1]
+    SINO_SI d<91
+        texto = " noventa"
+    SINO_SI d<100
+        texto = " noventa y " + primeros[d-90+1]
+    FIN_SI
+
+    DEVOLVER texto
+FIN_SUBRUTINA
+
+
+
+SUBRUTINA convertir n
+    cientos = ["ciento","doscientos","trescientos","cuatrocientos","quinientos","seiscientos","setecientos","ochocientos","novecientos"]
+    signo=""
+    SI n<0
+        n = -n
+        signo = "menos"
+    FIN_SI
+
+    d = n RESTO 100
+    n = n DIV_ENTERA 100
+    texto = convertir_2dig(d)
+
+    SI n==0
+        DEVOLVER signo+texto
+    FIN_SI
+
+    SI d==0
+        texto = ""
+    FIN_SI
+
+    d = n RESTO 10
+    n = n DIV_ENTERA 10
+
+    SI texto == "" Y d==1
+        texto = " cien"
+    SINO_SI d>0
+        texto = " " + cientos[d] + texto
+    FIN_SI
+
+    SI n==0
+        DEVOLVER signo+texto
+    FIN_SI
+
+    d = n RESTO 1000
+    n = n DIV_ENTERA 1000
+
+    SI d==1
+        texto = " mil" + texto
+    SINO_SI d>0
+        texto =  convertir(d) + " mil" + texto
+    FIN_SI
+
+    SI n==0
+        DEVOLVER signo+texto
+    FIN_SI
+
+    SI n==1
+        texto = " un millón" + texto
+    SINO
+        texto = convertir(n) + " millones" + texto
+    FIN_SI
+
+    DEVOLVER signo+texto
+FIN_SUBRUTINA

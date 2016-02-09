@@ -1,0 +1,21 @@
+#ORDENA USANDO EL ALGORITMO DE LA BURBUJA, 
+#EL PARAMETRO DEBE SER UN ARREGLO
+#TODOS LOS VALORES DEL ARREGLO RECIBIDO DEBEN DE SER DEL MISMO TIPO
+SUBRUTINA ordenar arreglo
+    longitud = LONGITUD(arreglo)
+    i=1
+    MIENTRAS i<=longitud
+        j=1
+        MIENTRAS j<=longitud-1
+            SI arreglo[j]>arreglo[j+1]
+                aux=arreglo[j]
+                arreglo[j]=arreglo[j+1]
+                arreglo[j+1]=aux
+            FIN_SI
+            j=j+1
+        FIN_MIENTRAS
+        i=i+1
+    FIN_MIENTRAS
+    
+    DEVOLVER arreglo
+FIN_SUBRUTINA

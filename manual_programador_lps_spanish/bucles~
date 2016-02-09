@@ -1,0 +1,15 @@
+contador=1
+MIENTRAS contador<= 5
+
+ SI contador==3
+  contador=contador+1
+  CONTINUAR
+ FIN_SI
+ # cuando contador valga 3 no se ejecutara lo que sigue
+
+ ESCRIBIR (NL,"Contador: ",contador,NL)
+
+ contador=contador+1
+FIN_MIENTRAS
+
+ESCRIBIR (NL,"Fin del programa",NL)

@@ -1,0 +1,5 @@
+ESCRIBIR NL,"El resultado de la expresion 18+1*2/6-3 es:",NL
+ESCRIBIR 18+1*2/6-3
+ESCRIBIR NL," tenga en cuenta la precedencia de operadores al observar el resultado",NL
+
+ESCRIBIR NL,"Fin del programa",NL

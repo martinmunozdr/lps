@@ -1,0 +1,16 @@
+#!/home/martin/Desktop/lenguaje/ejecutor9/lps
+#un ejemplo con cgi
+ESCRIBIR("Content-Type: text/html",NL,NL) #Empezar siempre asi.
+get = OBTENER_GET()
+
+SI EXISTE_CLAVE(get,"num1")
+    ESCRIBIR("<TITLE>Resultados</TITLE>")
+    ESCRIBIR("<H3>Resultados de la Multiplicacion</H3>")
+    ESCRIBIR("EL PRODUCTO DE ",get["num1"]," y ",get["num2"], " es ", TXT_A_ENT(get["num1"])*TXT_A_ENT(get["num2"]))
+FIN_SI
+
+ESCRIBIR("<form action='http://localhost/cgi-bin/prueba_get.lps' method='GET'>")
+ESCRIBIR("<div><label>FACTOR 1: <input name='num1' size='5'></label></div>")
+ESCRIBIR("<div><label>FACTOR 2: <input name='num2' size='5'></label></div>")
+ESCRIBIR("<div><input type='submit' value='Multiplica!'></div>")
+ESCRIBIR("</form>")

@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Manual del Programador - Subrutinas</title>
+</head>
+<body>
+<h1>Subrutinas</h1>
+<b>
+<br>
+A las Subrutinas se les puede pasar valores, es decir parametros.<br>
+No se les puede pasar listas pero si arreglos, se puede convertir de lista a arreglo <br>
+para superar esta limitacion utilizando mi_arreglo=LISTA_A_ARREGLO(mi_lista)<br>
+<br>
+No pueden acceder a variables declaradas fuera de la funcion.<br>
+<br>
+Los parametros se pasan por valor, es decir los cambios que se hagan a un parametro<br>
+no afectan al parametro en el bloque que llamo a la subrutina, por ejemplo:<br>
+<br>
+mi_sub(a) no cambiara el valor de a independientemente de lo que se haga en la subrutina<br>
+<br>
+para cambiar habria que hacer lo siguiente: a=misub(a)<br>
+<br>
+Las subrutinas en el lenguaje LPS Aceptan recursividad<br>
+La recursividad debe ser usada evitando caer en ciclos infinitos<br>
+<br>
+Las subrutinas pueden tener de 0 a mas parametros<br>
+<br>
+Su sintaxis es:<br>
+<br>
+SUBRUTINA subf1 parametro1 parametro2 parametro3<br>
+ #cuerpo de la subrutina<br>
+ RETORNAR 5<br>
+FIN_SUBRUTINA<br>
+<br>
+Se les llama de la siguiente manera:<br>
+<br>
+sub1(parametro1,parametro2)<br>
+<br>
+Tener en cuenta que si no se usa DEVOLVER la funcion retornara VACIO<br>
+La palabra reservada DEVOLVER tiene las siguientes opciones:<br>
+- Estar seguida de una expresion(devolvera el valor resultante)<br>
+- Estar sola (devolvera VACIO)<br>
+<br>
+</b>
+<br><br>
+<a href="subrutinas">Ejemplo: </a><br>
+<a href="expresiones.html"> Anterior </a><a href="clases.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

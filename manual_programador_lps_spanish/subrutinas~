@@ -1,0 +1,37 @@
+SUBRUTINA factRecursivo numero
+ SI numero==0
+  DEVOLVER 1
+ FIN_SI
+
+ DEVOLVER numero*factRecursivo(numero-1)
+FIN_SUBRUTINA
+
+
+SUBRUTINA factIterativo numero
+ SI numero==0 # en el caso de que numero valga cero
+  DEVOLVER 1
+ FIN_SI
+
+ rpta=1
+
+ contador=1
+
+ MIENTRAS contador<=numero
+  rpta=rpta*contador
+  contador=contador+1
+ FIN_MIENTRAS
+
+ DEVOLVER rpta
+FIN_SUBRUTINA
+
+
+ESCRIBIR (NL,"Ingrese un numero: ",NL)
+
+num=LEER_ENTERO()
+
+SI num>=0
+ ESCRIBIR (NL,"Factorial hallado de forma recursiva: ",factRecursivo(num),NL)
+ ESCRIBIR (NL,"Factorial hallado de forma iterativa: ",factIterativo(num),NL)
+SINO
+ ESCRIBIR (NL,"Los numeros negativos no tienen factorial",NL)
+FIN_SI

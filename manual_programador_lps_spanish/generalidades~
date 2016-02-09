@@ -1,0 +1,39 @@
+FUNCION procesar x,y
+ RETORNAR x+y
+FINFUNCION
+
+FUNCION Procesar x,y \Es otro nombre de funcion pues empieza en mayuscula
+ RETORNAR x*y        \por supuesto que seria mejor ponerles nombres
+FINFUNCION           \mas distintos y mas descriptivos, como sumar y multiplicar
+
+\ esta linea solo es un comentario
+
+VARIABLE contador \las variables se inicializan en cero
+VARIABLE valor
+
+contador=1 \asignamos 1 al contador
+
+ARREGLO arr 5 \ arreglo de 5 elementos
+
+REPETIR
+ ESCRIBIR NL,"Ingrese numero(cero para salir):",NL
+ LEER valor
+
+ SI contador>=1 & contador<=5 \si contador es un indice valido para arreglo arr
+  arr[contador]=valor
+ SINO
+  ESCRIBIR NL,"No se esta escribiendo en el arreglo, pues ya se lleno",NL
+ FINSI 
+
+ contador=contador+1
+DURANTE valor!=0
+
+ESCRIBIR NL,"El resultado de sumar los tres primeros numeros",NL
+ESCRIBIR " ingresados al producto del cuarto y quinto es:",NL
+ESCRIBIR procesar(  procesar(arr[1],arr[2]),  arr[3]  ) + Procesar(arr[4],arr[5]),NL
+\ el resultado es el mismo que daria arr[1]+arr[2]+arr[3]+arr[4]*arr[5]
+
+ESCRIBIR NL,"Fin del programa",NL
+
+
+

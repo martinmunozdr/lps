@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Manual del Programador - Funciones</title>
+</head>
+<body>
+<h1>Funciones</h1>
+<b>
+<br>
+Son subrutinas a las cuales se les puede pasar valores, y hasata incluso arreglos.<br>
+No pueden acceder a variables declaradas fuera de la funcion.<br>
+Pueden tener de 0 a mas parametros<br>
+<br>
+Su sintaxis es:<br>
+<br>
+FUNCION f1 parametro1,parametro2<br>
+ \cuerpo de la funcion<br>
+ RETORNAR 5<br>
+FINFUNCION<br>
+<br>
+Esta funcion puede ser llamada en una expresion o sola.<br>
+<br>
+De la siguiente manera:<br>
+<br>
+f1(parametro1,parametro2)<br>
+<br>
+Tener en cuenta que si no se usa RETORNAR la funcion retornara 0<br>
+La palabra reservada retornar tiene las siguientes opciones:<br>
+- Estar seguida de una expresion(devolvera el valor resultante)<br>
+- Estar sola (devolvera cero)<br>
+<br>
+Tener en cuenta que para que una funcion reciba un arreglo entero como parametro<br>
+no deben colocarse corchetes y debe usarse $ despues del nombre del arreglo<br>
+Ejemplo:<br><br>
+f1(x+1,arr$)<br>
+donde x es una variable y arr es el nombre de un arreglo<br>
+</b>
+<br><br>
+<a href="funciones">Ejemplo: </a><br>
+<a href="expresiones.html"> Anterior </a><a href="arreglos.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

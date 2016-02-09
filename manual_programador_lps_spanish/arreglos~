@@ -1,0 +1,23 @@
+FUNCION imprime cantidad, arreglo
+ VARIABLE contador
+ DESDE contador INICIA 1 TERMINA cantidad
+  ESCRIBIR NL,"Elemento ",contador,": ",arreglo[contador]
+ FINDESDE
+FINFUNCION
+
+
+
+VARIABLE cantidad
+ESCRIBIR "Ingrese cantidad de numeros: "
+cantidad = leer()
+
+ARREGLO arr cantidad
+
+\ Lleno valores
+VARIABLE contador
+
+DESDE contador INICIA 1 TERMINA cantidad
+ arr[contador] = aleatorio(cantidad)
+FINDESDE
+
+imprime(cantidad,arr$)

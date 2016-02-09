@@ -1,0 +1,7 @@
+#!/home/martin/Desktop/lenguaje/ejecutor9/lps
+ESCRIBIR("Content-Type: text/html",NL,NL) #Empezar siempre asi.
+get = OBTENER_GET()
+
+ESCRIBIR("<TITLE>Resultados</TITLE>")
+ESCRIBIR("<H3>Resultados de la Multiplicacion</H3>")
+ESCRIBIR("EL PRODUCTO DE ",get["num1"]," y ",get["num2"], " es ", TXT_A_ENT(get["num1"])*TXT_A_ENT(get["num2"]))

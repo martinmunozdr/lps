@@ -1,0 +1,14 @@
+ESCRIBIR (NL,"Ingrese un numero: ")
+x = LEER_ENTERO()
+
+SI x>100
+ ESCRIBIR (NL,"Numero mayor a 100",NL)
+SINO_SI x<0
+ ESCRIBIR (NL,"Numero negativo",NL)
+SINO_SI x==50 #x es igual a 50
+ ESCRIBIR (NL,"Numero es 50",NL)
+SINO  #si no se cumple ninguna de las condiciones
+ ESCRIBIR (NL,"Numero no cumple ninguna de las condiciones",NL)
+FIN_SI
+
+ESCRIBIR( NL,"Fin del programa",NL)

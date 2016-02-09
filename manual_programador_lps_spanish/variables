@@ -1,0 +1,4 @@
+x=-5
+y=x^2
+
+ESCRIBIR (NL," x: ",x,NL," y: ",y)

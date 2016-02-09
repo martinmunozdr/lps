@@ -1,0 +1,14 @@
+IMPORTAR "api.lps"
+arr=ARREGLO(4)
+
+arr[1]=154
+arr[2]=16
+arr[3]=2
+arr[4]=20
+#arr[4]="qwe" #SI SE USA ESTA LINEA EN LUGAR DE LA ANTERIOR SERIA UN CASO SIMPLE DE ABUSO DE API
+
+ESCRIBIR(ordenar(arr))
+
+
+
+

@@ -1,0 +1,4 @@
+ESCRIBIR (NL,"El resultado de la expresion 4+5*7/8-2 es:",NL)
+ESCRIBIR (4+5*7/8-2) #MOSTRARA 6
+
+ESCRIBIR (NL,"Fin del programa",NL)

@@ -1,0 +1,9 @@
+SUBRUTINA evaluar x
+    SI x<10
+        ESCRIBIR("MENOR QUE 10")
+    SINO_SI x<20
+        ESCRIBIR("MENOR QUE 20")
+    SINO_SI x<50
+        ESCRIBIR("MENOR QUE 50")
+    FIN_SI
+FIN_SUBRUTINA

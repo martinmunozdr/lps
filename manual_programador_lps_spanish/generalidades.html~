@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Manual del Programador - Generalidades</title>
+</head>
+<body>
+<h1>Generalidades</h1>
+<b>
+<br>
+Este programa manipula varios tipos de datos: numeros con decimales, enteros, textos, <br>
+ valor de verdad (verdadero y falso), tambien pueden tener el valor VACIO<br>
+Tiene tambien estructuras de datos como son: listas, arreglos, diccionarios.<br>
+Soporta programacion orientada a objetos utilizando clases.
+<br>
+Tiene subrutinas, condicionales, bucles, sentencias para lectura y escritura de datos de pantalla.<br>
+<br>
+Tiene un conjunto de operadores que le permite resolver expresiones.<br>
+<br>
+Los identificadores(nombres de variables, arreglos y subrutinas) deben:<br>
+ - Empezar con una letra<br>
+ - Estar formados solo por numeros, guion bajo y letras<br>
+ - No tener el mismo nombre de una palabra reservada<br>
+<br>
+Tener en cuenta que este lenguaje distingue mayusculas de minusculas.<br>
+Los comentarios empiezan con el caracter # y son de una sola linea<br>
+
+Este lenguaje se puede usar para programacion web utilizando cgi, tambien puede conectarse con bases de <br>
+datos Sqlite, tiene subrutinas predefinidas para esto.<br>
+</b>
+<br><br>
+<a href="generalidades">Ejemplo: </a><br>
+<a href="indice.html"> Anterior </a><a href="variables.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

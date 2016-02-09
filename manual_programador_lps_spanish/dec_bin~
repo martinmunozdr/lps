@@ -1,0 +1,14 @@
+#Recursividad
+
+
+SUBRUTINA decBin num  
+SI num<2
+   DEVOLVER num
+FIN_SI
+DEVOLVER (num RESTO 2)+decBin(num DIV_ENTERA 2)*10
+FIN_SUBRUTINA 
+
+
+ESCRIBIR ("Ingrese numero en base 10")
+numero=LEER_ENTERO()
+ESCRIBIR ("El numero en binario es ==> ",decBin(numero),NL)

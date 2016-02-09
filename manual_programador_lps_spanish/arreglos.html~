@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Manual del Programador - Arreglos</title>
+</head>
+<body>
+<h1>Arreglos</h1>
+<b>
+<br>
+Son conjuntos de numeros a los cuales se accede a traves indices.<br>
+Pueden tener de 1 a mas indices.<br>
+<br>
+Su sintaxis es:<br>
+<br>
+ARREGLO arr indice1,indice2,indice3<br>
+<br>
+Los indices son expresiones(valores, variables, operaciones, entre otros)<br>
+Si se coloca un indice con decimales, este se convertira a entero.<br>
+Los indices se convierten a enteros truncando(eliminando los decimales, NO se redondea)<br>
+No se aceptan indices negativos, ni iguales a cero, en estos casos se reportara un error<br>
+Los indices empiezan de 1<br>
+<br>
+Se accede usando el nombre del arreglo seguido de corchetes arr[indice1,indice2,indice3]<br>
+<br>
+Ejemplo:<br>
+ARREGLO arreglo 5,3    \ por ejemplo el 1er indice ira de 1 a 5<br>
+<br>
+ESCRIBIR arreglo[1,1] \ esto escribira en pantalla cero,<br>
+                       \ pues todos los elementos del arreglo se <br>
+                       \ inicializan en cero<br>
+<br>
+<br>
+<br>
+Para pasar un arreglo completo como parametro, y no solo el valor de uno de sus elementos<br>
+se debe usar:  $<br><br>
+Ejemplo:<br>
+imprimirArregloOrdenado(arr$)<br>
+<br>
+Donde:<br>
+imprimirArregloOrdenado es nombre de funcion<br>
+arr es nombre de arreglo(es necesario colocar $ para que pase el arreglo)<br>
+<br>
+Si se desea conocer la cantidad de elementos de un arreglo se puede usar la funcion predefinida<br>
+longitud_arreglo(mi_arreglo$)  <br> Devuelve la cantidad de elementos de un arreglo<br>
+</b>
+<br><br>
+<a href="arreglos">Ejemplo: </a><br>
+<a href="funciones.html"> Anterior </a><a href="entradaysalida.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

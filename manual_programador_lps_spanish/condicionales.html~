@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Manual del Programador - Condicionales</title>
+</head>
+<body>
+<h1>Condicionales</h1>
+<b>
+<br>
+Para tomar decisiones de acuerdo a una condicion existe el bloque SI<br>
+<br>
+su sintaxis es:<br>
+<br>
+SI condicion1<br>
+ # El codigo aqui colocado<br>
+ # se ejecutara cuando se cumpla condicion1,<br>
+ # y no se ejecutaran las demas partes del bloque SI <br>
+SINOSI condicion2<br>
+ # El codigo aqui colocado<br>
+ # se ejecutara cuando no se cumpla condicion1 y si se cumpla condicion2,<br>
+ # y no se ejecutaran las demas partes del bloque SI<br>
+SINOSI condicion3<br>
+ # El codigo aqui colocado<br>
+ # se ejecutara cuando no se cumpla condicion1 ni condicion2 y si se cumpla condicion3,<br>
+ # y no se ejecutaran las demas partes del bloque SI<br>
+SINO<br>
+ # El codigo aqui colocado<br>
+ # se ejecutara cuando no se cumpla ninguna de las condiciones,<br>
+ 3 y no se ejecutaran las demas partes del bloque SI<br>
+FINSI<br>
+<br>
+Tanto los SINOSI como el SINO son opcionales.<br>
+<br>
+Tener en cuenta que el SINOSI debe ir antes del SINO<br>
+</b>
+<br><br>
+<a href="condicionales">Ejemplo: </a><br>
+<a href="operadores.html"> Anterior </a><a href="bucles.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

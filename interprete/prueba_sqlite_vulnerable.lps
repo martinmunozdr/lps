@@ -1,0 +1,48 @@
+SQLITE3_OPEN("mibd.sqlite")
+
+ESCRIBIR("INGRESE UN NOMBRE: ")
+nombre = LEER_TEXTO()
+SQLITE3_PREPARE("SELECT nombre,edad FROM datos where nombre='"+nombre+"'")
+#SQLITE3_BIND_TEXT(":nombre",nombre)
+MIENTRAS SQLITE3_STEP()
+     ESCRIBIR("El nombre y la edad son: ", SQLITE3_COLUMN_TEXT(0), " Y ", SQLITE3_COLUMN_INT(1),NL)
+FIN_MIENTRAS
+SQLITE3_FINALIZE()
+
+SQLITE3_PREPARE("SELECT nombre,edad FROM datos where edad=:edad")
+ESCRIBIR("INGRESE UNA EDAD: ")
+edad = LEER_ENTERO()
+SQLITE3_BIND_INT(":edad",edad)
+MIENTRAS SQLITE3_STEP()
+     ESCRIBIR("El nombre y la edad son: ", SQLITE3_COLUMN_TEXT(0), " Y ", SQLITE3_COLUMN_INT(1),NL)
+FIN_MIENTRAS
+SQLITE3_FINALIZE()
+
+SQLITE3_PREPARE("SELECT nombre,edad,soles FROM datos where soles=:soles")
+ESCRIBIR("INGRESE UNA CANTIDAD DE SOLES: ")
+soles = LEER_NUMERO()
+SQLITE3_BIND_DOUBLE(":soles",soles)
+MIENTRAS SQLITE3_STEP()
+     ESCRIBIR("El nombre, la edad y su dinero son: ", SQLITE3_COLUMN_TEXT(0), "," , SQLITE3_COLUMN_INT(1), " Y ",SQLITE3_COLUMN_DOUBLE(2),NL)
+FIN_MIENTRAS
+SQLITE3_FINALIZE()
+
+ESCRIBIR(NL,NL, "A continuacion toda la tabla.",NL)
+SQLITE3_PREPARE("SELECT nombre,edad FROM datos")
+MIENTRAS SQLITE3_STEP()
+     ESCRIBIR("El nombre y la edad son: ", SQLITE3_COLUMN_TEXT(0), " Y ", SQLITE3_COLUMN_INT(1),NL)
+FIN_MIENTRAS
+SQLITE3_FINALIZE()
+
+
+ESCRIBIR("INGRESE UN NOMBRE: ")
+minombre = LEER_TEXTO()
+SQLITE3_PREPARE("SELECT nombre,edad FROM datos where nombre='"+minombre+"'")
+#SQLITE3_BIND_TEXT(":nombre",nombre)
+MIENTRAS SQLITE3_STEP()
+     ESCRIBIR("El nombre y la edad son: ", SQLITE3_COLUMN_TEXT(0), " Y ", SQLITE3_COLUMN_INT(1),NL)
+FIN_MIENTRAS
+SQLITE3_FINALIZE()
+
+
+SQLITE3_CLOSE()

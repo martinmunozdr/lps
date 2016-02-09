@@ -1,0 +1,26 @@
+<html>
+<br><head>
+<br><title>Manual del Programador - Clases</title>
+<br></head>
+<br><body>
+<br><h1>Clases</h1>
+<br><b>
+<br>
+<br>SE CREA UNA CLASE CON LA INSTRUCCION:
+<br>CLASE nombre_clase padre1 padre2 padre3 etc
+<br>
+<br>SE CREAN ATRIBUTOS CON LA INSTRUCCION:
+<br>ATRIBUTOS nombre_clase att1 att2 att3 etc
+<br>
+<br>SE CREAN METODOS CON:
+<br>METODO nombre_clase nombre_metodo parametro1 parametro2 parametro3
+<br>DEVOLVER valor_retorno #opcional
+<br>FIN_METODO
+<br>
+<br>
+<br></b>
+<br><br>
+<br><a href="clases">Ejemplo: </a><br>
+<br><a href="subrutinas.html"> Anterior </a><a href="entradaysalida.html">Siguiente</a><a href="indice.html">Indice</a>
+<br></body>
+<br></html>

@@ -1,0 +1,22 @@
+#!/home/martin/Desktop/lenguaje/ejecutor9/lps
+ESCRIBIR("Content-Type: text/html",NL,NL) #Empezar siempre asi.
+
+ESCRIBIR("<form action='http://localhost/cgi-bin/prueba_cgi_sql.lps' method='POST'>")
+ESCRIBIR_TOKEN_CSRF()
+ESCRIBIR("<div>Nombre a buscar: <input name='nombre' ></input></div>")
+ESCRIBIR("<div><input type='submit' value='Consulta'></input></div>")
+ESCRIBIR("</form>")
+
+post = OBTENER_POST()
+
+SI TIPO_DE(post)!="VACIO"
+    SQLITE3_OPEN("/home/martin/Desktop/lenguaje/ejecutor9/mibd.sqlite")
+    SQLITE3_PREPARE("SELECT nombre,edad FROM datos where nombre=:nombre")
+    SQLITE3_BIND_TEXT(":nombre",post["nombre"])
+    LOG_SI_DETECTO_SQL_INJECTION("/var/log/lps/",post["nombre"])
+    MIENTRAS SQLITE3_STEP()
+        ESCRIBIR("El nombre y la edad son: ", SQLITE3_COLUMN_TEXT(0), " Y ", SQLITE3_COLUMN_INT(1),"<br>")
+    FIN_MIENTRAS
+    SQLITE3_FINALIZE()
+    SQLITE3_CLOSE()
+FIN_SI

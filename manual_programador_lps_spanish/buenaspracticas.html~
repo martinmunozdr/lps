@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Manual del Programador - Buenas Practicas</title>
+</head>
+<body>
+<h1>Buenas Practicas</h1>
+<b>
+Hacer comentarios sobre el programa y su logica cuando sea necesario.<br>
+Se recomienda usar nombres de variables descriptivos.<br>
+Se recomienda identar y dejar espacio entre bloques de codigo.<br>
+<br>
+Identar es colocar distinta cantidad de espacios desde la izquierda para distintos bloques.<br>
+Identar es colocar mas espacios para los bloques mas internos.<br>
+<br>
+<a href="buenaspracticas">Ejemplo: </a><br>
+
+<a href="predefinidos.html"> Anterior </a><a href="ejemplos.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>

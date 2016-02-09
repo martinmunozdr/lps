@@ -1,0 +1,3 @@
+ESCRIBIR("INGRESE SU NOMBRE:")
+nombre = LEER_TEXTO()
+ESCRIBIR("HOLA ", nombre)

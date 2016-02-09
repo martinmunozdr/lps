@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Manual del Programador - Operadores</title>
+</head>
+<body>
+<h1>Operadores</h1>
+<b>
+<br>
+En orden de precedencia, el de mas arriba se ejecuta primero.<br>
+<br>
+() [] .  <br>           Agrupan una operacion, indice de arreglo, diccionario, lista y el operador .<br><br>
+NEGACION-+       <br>      Operadores unarios: negacion(este ademas es un operador logico), signo menos, signo mas<br><br>
+^  <br>Operador exponente<br><br>
+*/RESTO DIV_ENTERA     <br>      Operadores multiplicar, dividir, resto de division y division entera<br><br>
++-         <br>     Operadores suma y resta<br><br>
+< > <= >= <br>Operadores condicionales: menor, mayor, menor igual, mayor igual, <br><br>
+== != <br>igual(de comparacion NO es = sino ==), diferente<br><br>
+Y           <br>  Operadores logicos<br><br>
+O          <br>  Operadores logicos<br><br>
+=           <br>  asignacion, no confundir con == que es comparacion<br><br>
+<br><br><br>
+Tambien existe el operador "coma" ',' que se usa para separar indices.<br>
+Este operador se usa tanto en funciones como en arreglos.<br><br>
+<br>
+Se asigna valores con el operador =<br>
+<br>
+Ejemplo:<br>
+x=45<br>
+<br>
+</b>
+<br><br>
+<a href="operadores">Ejemplo: </a><br>
+<a href="miprimerprograma.html"> Anterior </a><a href="condicionales.html">Siguiente</a><a href="indice.html">Indice</a>
+</body>
+</html>
